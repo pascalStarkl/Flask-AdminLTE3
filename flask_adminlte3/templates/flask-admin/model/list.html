@@ -4,6 +4,7 @@
 {% import 'flask-admin/model/layout.html' as model_layout with context %}
 {% import 'flask-admin/actions.html' as actionlib with context %}
 {% import 'flask-admin/model/row_actions.html' as row_actions with context %}
+{% import 'flask-admin/adminlte/adminlte.html' as adminlte with context %}
 
 {% block head %}
     {{ super() }}
@@ -60,7 +61,7 @@
                             {% endif %}
 
                             {% if actions %}
-                                {{ actionlib.dropdown(actions) }}
+                                {{ adminlte.bulk_actions_dropdown_button(actions, btn_class='btn btn-default btn-sm dropdown-toggle') }}
                             {% endif %}
 
                             {% if search_supported %}
@@ -197,15 +198,15 @@
 
 {% block tail %}
     {{ super() }}
-    <script src="{{ admin_static.url(filename='admin/js/bs4_modal.js', v='1.0.0') }}"></script>
-    <script src="{{ admin_static.url(filename='admin/js/bs4_filters.js', v='1.0.0') }}"></script>
+    <script {{ admin_csp_nonce_attribute }} src="{{ admin_static.url(filename='admin/js/bs4_modal.js', v='1.0.0') }}"></script>
+    <script {{ admin_csp_nonce_attribute }} src="{{ admin_static.url(filename='admin/js/bs4_filters.js', v='1.0.0') }}"></script>
     {{ lib.form_js() }}
 
     {{ actionlib.script(_gettext('Please select at least one record.'),
                         actions,
                         actions_confirmation) }}
 
-    <script language="javascript">
+    <script {{ admin_csp_nonce_attribute }} language="javascript">
         (function ($) {
             $('[data-role=tooltip]').tooltip({
                 html: true,
