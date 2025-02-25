@@ -183,15 +183,14 @@
     <!-- daterangepicker -->
     <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/moment/moment.min.js') }}"></script>
     <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/daterangepicker/daterangepicker.js') }}"></script>
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
     <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/select2/js/select2.min.js') }}"></script>
     <!-- Summernote -->
     <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/summernote/summernote-bs4.min.js') }}"></script>
     <!-- overlayScrollbars -->
     <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
     <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('dist/js/adminlte.js') }}"></script>
-
+{#    <!-- Tempusdominus Bootstrap 4 -->#}
+{#    <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>#}
 {#    <script {{ admin_csp_nonce_attribute }} src="{{ admin_static.url(filename='vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js') }}" type="text/javascript"></script>#}
 {% endblock tail_js %}
 
