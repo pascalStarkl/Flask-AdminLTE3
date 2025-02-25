@@ -33,15 +33,15 @@
 {% endmacro %}
 
 {% macro dropdown_button(text) %}
-    <a class="btn btn-default btn-sm" data-toggle="dropdown" href="javascript:void(0)">
-        {{ text }} <b class="caret"></b>
-    </a>
+
 {% endmacro %}
 
 {% macro filter_dropdown_button(btn_class='dropdown-toggle') %}
-    <div class="input-group-btn" style="display: inline-block; width: auto;">
-        {{ dropdown_button(_gettext('Filter')) }}
-        <ul class="dropdown-menu field-filters">
+    <div class="input-group-btn dropdown" style="display: inline-block; width: auto;">
+        <a class="btn btn-default btn-sm dropdown-toggle" href="#" role="button" id="dropdown-filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ _gettext('Filter') }}
+        </a>
+        <ul class="dropdown-menu field-filters" aria-labelledby="dropdown-filter">
             {% for k in filter_groups %}
                 <li>
                     <a href="javascript:void(0)" class="filter" onclick="return false;">{{ k }}</a>
@@ -73,9 +73,11 @@
 {% endmacro %}
 
 {% macro bulk_actions_dropdown_button(actions, btn_class='dropdown-toggle') -%}
-    <div class="input-group-btn" style="display: inline-block; width: auto;">
-        {{ dropdown_button(_gettext('With selected')) }}
-        <ul class="dropdown-menu">
+    <div class="input-group-btn dropdown" style="display: inline-block; width: auto;">
+        <a class="btn btn-default btn-sm dropdown-toggle" href="#" role="button" id="dropdown-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ _gettext('With selected') }}
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-actions">
             {% for p in actions %}
                 <li>
                     <a href="javascript:void(0)"
