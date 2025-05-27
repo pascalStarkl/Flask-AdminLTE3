@@ -51,6 +51,7 @@
         <link {{ admin_csp_nonce_attribute }} rel="stylesheet"
                                               href="{{ adminlte_static.url('plugins/summernote/summernote-bs4.min.css') }}">
 
+
         <link {{ admin_csp_nonce_attribute }}
                 href="{{ admin_static.url(filename='admin/css/bootstrap4/admin.css', v='1.1.1') }}" rel="stylesheet">
         <link {{ admin_csp_nonce_attribute }}
@@ -196,6 +197,11 @@
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>
+    <!-- ace -->
+    <script {{ admin_csp_nonce_attribute }} rel="stylesheet"
+                                            href="{{ adminlte_static.url('plugins/ace/ace.js') }}"></script>
+
+
     <!-- Bootstrap 4 -->
     <script {{ admin_csp_nonce_attribute }}
             src="{{ admin_static.url(filename='bootstrap/bootstrap4/js/bootstrap.min.js', v='4.2.1') }}"></script>
@@ -221,7 +227,10 @@
         {% endfor %}
     {% endif %}
     <!-- ChartJS -->
-    <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/chart.js/Chart.min.js') }}"></script>
+    <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/chartjs/chart.umd.min.js') }}"></script>
+    <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/chartjs-adapter-date-fns/chartjs-adapter-date-fns.bundle.min.js') }}"></script>
+    <!-- Socket IO -->
+    <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/socketio/socket.io.min.js') }}"></script>
     <!-- Sparkline -->
     <script {{ admin_csp_nonce_attribute }} src="{{ adminlte_static.url('plugins/sparklines/sparkline.js') }}"></script>
     <!-- daterangepicker -->
