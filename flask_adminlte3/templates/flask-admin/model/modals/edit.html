@@ -12,8 +12,6 @@
 {% endblock %}
 
 {% block tail %}
-    <script {{ admin_csp_nonce_attribute }} src="{{ admin_static.url(filename='admin/js/bs4_modal.js', v='1.0.0') }}"></script>
-
     <script {{ admin_csp_nonce_attribute }}>
         $(function () {
             // Apply flask-admin form styles after the modal is loaded
