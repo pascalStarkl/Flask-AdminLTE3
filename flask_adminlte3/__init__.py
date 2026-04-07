@@ -1,4 +1,4 @@
-__version__ = '1.0.10'
+__version__ = '1.0.12'
 from flask import Blueprint
 
 
