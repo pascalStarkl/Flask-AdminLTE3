@@ -199,11 +199,11 @@
     </script>
 
     <!-- Bootstrap 4 -->
-    <script {{ admin_csp_nonce_attribute }}
-            src="{{ admin_static.url(filename='bootstrap/bootstrap4/js/bootstrap.min.js', v='4.2.1') }}"></script>
-    <script {{ admin_csp_nonce_attribute }}
+        <script {{ admin_csp_nonce_attribute }}
             src="{{ admin_static.url(filename='bootstrap/bootstrap4/js/popper.min.js') }}"
             type="text/javascript"></script>
+    <script {{ admin_csp_nonce_attribute }}
+            src="{{ admin_static.url(filename='bootstrap/bootstrap4/js/bootstrap.min.js', v='4.2.1') }}"></script>
     <script {{ admin_csp_nonce_attribute }} src="{{ admin_static.url(filename='vendor/moment.min.js', v='2.9.0') }}"
                                             type="text/javascript"></script>
     <script {{ admin_csp_nonce_attribute }}
